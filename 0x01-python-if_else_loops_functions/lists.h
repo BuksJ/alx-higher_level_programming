@@ -19,6 +19,15 @@ typedef struct listint_s
 size_t print_listint (const listint_t *h);
 listint_t *add_nodeint_end(listint_t **head, const int n);
 void free_listint(listint_t *head);
+
 listint_t *insert_node(listint_t **head, int number);
+def uppercase(str):
+def islower(c):
+def print_last_digit(number):
+def add(a, b):
+def pow(a, b):
+def remove_char_at(str, n):
+def magic_calculation(a, b, c):
+
 
 #endif
