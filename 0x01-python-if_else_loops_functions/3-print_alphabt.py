@@ -1,4 +1,4 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 for character in range(97, 123):
 	if (character != ["q", "e"])
-		print ("{:c}".format(character), end="")
+print("{:c}".format(character), end="")
