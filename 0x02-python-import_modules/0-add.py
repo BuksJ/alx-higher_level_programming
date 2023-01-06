@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def main():
     # Import the add function from the add_0 module
     from add_0 import add
