@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 x_integer(matrix=[[]]):
   for row in matrix:
-    print(" ".join("{:d}".format(col) for col in row)
+    for col in row
+      print("{:d}".format(col), end_ " " if col != row[-1] else"")
+  print()
