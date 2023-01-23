@@ -1,12 +1,5 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
-    """print an integer ({:d}".format()
-    args:
-    value (int): the integer to be printed
-    Returns:
-        if a TypeError or ValueError occurs - False
-        otherwise - True
-    """
     integers_printed = 0
     for i in range(x):
         try:
