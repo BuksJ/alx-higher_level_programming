@@ -1,0 +1,74 @@
+#include "Python.h"
+#include <stdio.h>
+
+/**
+ * print_python_list - prints basic info about Python lists
+ * @p: pointer to a PyObject
+ */
+
+void print_python_list(PyObject *p)
+{
+	int i;
+	PyListObject *list;
+
+	if (!PyList_Check(p))
+	{
+		printf("Error: Invalid List Object\n");
+		return;
+	}
+	list = (PyListObject *)p;
+	printf("[*] Python list info\n");
+	printf("[*] Size of the Python List = %ld\n", Py_SIZE(list));
+	printf("[*] Allocated = %ld\n", list->allocated);
+	for (i = 0; i < Py_SIZE(list); i++)
+	{
+		printf("Element %d: %s\n", i, Py_TYPE(list->ob_item[i])->tp_name);
+	}
+}
+
+
+/**
+ * print_python_bytes - prints basic info about Python bytes
+ * @p: pointer to a PyObject
+ */
+
+void print_python_bytes(PyObject *p)
+{
+	int i;
+	PyBytesObject *bytes;
+
+	if (!PyBytes_Check(p))
+	{
+		printf("Error: Invalid Bytes Object\n");
+		return;
+	}
+	bytes = (PyBytesObject *)p;
+	printf("[*] Python bytes info\n");
+	printf("[*] Size of the Python Bytes = %ld\n", Py_SIZE(bytes));
+	printf("[*] Trying string: %s\n", bytes->ob_sval);
+	printf("[*] First %d bytes: ", (int)Py_SIZE(bytes) < 10 ? Py_SIZE(bytes) : 10);
+	for (i = 0; i < (int)Py_SIZE(bytes) && i < 10; i++)
+	{
+		printf("%02x ", (unsigned char)bytes->ob_sval[i]);
+	}
+	printf("\n");
+}
+
+/**
+ * print_python_float - prints basic info about Python floats
+ * @p: pointer to a PyObject
+ */
+
+void print_python_float(PyObject *p)
+{
+	PyFloatObject *f;
+
+	if (!PyFloat_Check(p))
+	{
+		printf("Error: Invalid Float Object\n");
+		return;
+	}
+	f = (PyFloatObject *)p;
+	printf("[*] Python float info\n");
+	printf("[*] Value: %f\n", f->ob_fval);
+}
