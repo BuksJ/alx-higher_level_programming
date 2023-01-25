@@ -6,7 +6,6 @@ class Square:
     and instantiation with size
     """
     def __init__(self, size):
-
     """
     Initialize the square class with size attribute.
     """
