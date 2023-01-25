@@ -5,6 +5,8 @@ and instantiation with optional size
 
 
 class Square:
+    """Represent a square"""
+
     def __init__(self, size=0):
         """Initialize the square class with size attribute."""
         if not isinstance(size, int):
@@ -15,4 +17,4 @@ class Square:
 
         def area(self):
             """Returns the current square area"""
-            return self.__size ** 2
+            return (self.__size ** 2)
