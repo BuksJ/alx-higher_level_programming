@@ -6,7 +6,8 @@ and instantiation with size"""
 class Square:
     """represent a square"""
     def __init__(self, size):
-    """Initialize the square class with size attribute.
-    Args:
-        size (int): size of the new square"""
+
+        """Initialize the square class with size attribute.
+        Args:
+            size (int): size of the new square"""
     self.__size = size
