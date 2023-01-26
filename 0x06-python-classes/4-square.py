@@ -1,20 +1,22 @@
 #!/usr/bin/python3
-"""defines a square by private instance attribute size"""
+
+"""This module defines a class Square"""
 
 
 class Square:
+    """This class defines a square"""
     def __init__(self, size=0):
-        """Initialize the square class with size attribute."""
+        """Initializes the square with an optional size"""
         self.size = size
 
         @property
         def size(self):
-            """Retrieve the size of the square"""
+            """Getter for the size attribute"""
             return self.__size
 
         @size.setter
         def size(self, value):
-            """Set the size of the square"""
+            """Setter for the size attribute"""
             if not isinstance(value, int):
                 raise TypeError("size must be an integer")
             if value < 0:
