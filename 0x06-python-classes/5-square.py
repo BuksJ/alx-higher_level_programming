@@ -4,8 +4,8 @@
 
 
 class Square:
-    """Class that defines a square"""
-    def __init__(self, size=0):
+    """Class that reprsents a square"""
+    def __init__(self, size):
         """Initialize a square with optional size."""
         self.size = size
 
@@ -30,8 +30,8 @@ class Square:
     def my_print(self):
         """Method that prints in stdout the square with the character #."""
         if self.__size == 0:
-            for i in range(self.__size):
+            for i in range(0, self.__size):
                 for j in range(self.__size):
                     print("#", end="")
 
-                print()
+                print("")
