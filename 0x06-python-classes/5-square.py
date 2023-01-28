@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
-"""This is a class Square that defines a square with a private instance
-attribute size, getter and setter method for size, and methods to calculate
-the area and print the square."""
+"""defines a clss square."""
 
 
 class Square:
