@@ -4,6 +4,8 @@ and returns the number of characters written"""
 
 
 def write_file(filename="", text=""):
-    with open(filename, "w", encoding="utf-8") as f:
-        n = f.write(text)
-        return n
+    # w = Truncate file to zero length or
+    # create text file for writing
+    with open(filename, mode="w", encoding="utf-8") as f:
+        number_characters = f.write(text)
+        return (number_characters)
