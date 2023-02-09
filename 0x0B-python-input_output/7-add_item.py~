@@ -12,7 +12,7 @@ load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 
 filename = 'add_item.json'
 if os.path.exists(filename):
-    # if it exists, called it, otherwise 
+    # if it exists, called it, otherwise
     # make a new one
     the_list = load_from_json_file(filename)
 else:
