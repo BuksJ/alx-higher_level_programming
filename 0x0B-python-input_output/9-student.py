@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module that contain a class Student"""
 
 
 class Student:
