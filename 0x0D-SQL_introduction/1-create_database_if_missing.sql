@@ -1,2 +1,2 @@
 --This script creates the database hbtn_0c_0 in your MySQL server
-CREATE DATABASE IF NOT EXISTS `hbtn_0c_0`;
+mysql -u root -p -e "/* Create database if not exists */ CREATE DATABASE IF NOT EXISTS hbtn_0c_0;"
